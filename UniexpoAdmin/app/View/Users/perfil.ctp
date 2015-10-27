@@ -73,7 +73,7 @@
             <?php endif; ?>
             <?php if ($qtd < 1) : ?>
                 <a href="<?= $admLocal ?>UserImages/add/<?= $idUsuario ?>"
-                   class="btn btn-primary"><i class="icon-plus icon-white"></i> Cadastrar foto</a>
+                   class="btn btn-primary" style="float: none"><i class="icon-plus icon-white"></i> Cadastrar foto</a>
             <?php endif; ?>
 
             <?php if ($qtd == 1) : ?>

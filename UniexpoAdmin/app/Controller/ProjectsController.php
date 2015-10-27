@@ -91,15 +91,16 @@ class ProjectsController extends AppController
             ('User.id !=' => $this->Session->read('Auth.User.id'),
                 'Project.course_id' => $this->Session->read('Auth.User.course_id')
             )));
+            $this->set('ProjetosPorCurso', $porCurso, $this->paginate());
         }
         if ($this->Session->read('Auth.User.user_type_id') == 3) {
             $porCurso = $this->Project->find('all', array('conditions' => array
             ('User.id !=' => $this->Session->read('Auth.User.id')
             )));
+            $this->set('ProjetosPorCurso', $porCurso, $this->paginate());
         }
         $this->set('qtdProjeto',$qntProjetos);
         $this->set('qtdTotal',$qntTotalProjetos);
-        $this->set('ProjetosPorCurso', $porCurso, $this->paginate());
         $this->set('todosProjetos', $eventos2, $this->paginate());
         $this->set('novidades', $eventos, $this->paginate());
 

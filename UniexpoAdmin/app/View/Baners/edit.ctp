@@ -26,7 +26,7 @@
 
                             <div class="form-group">
                                 <?php echo $this->Form->label('filename', 'Clique aqui e escolha a imagem'); ?>
-                                <?php echo $this->Form->input('filename', array('class' => 'form-control', 'type' => 'file', 'accept' => 'image/jpeg', 'required')); ?>
+                                <?php echo $this->Form->input('filename', array('class' => 'form-control', 'type' => 'file', 'accept' => 'image/jpeg')); ?>
                             </div>
                             <!-- .form-group -->
 
@@ -46,7 +46,7 @@
 
                             <div class="form-group">
                                 <?php echo $this->Form->label('Link', 'Cole aqui do banner (ex: www.uniexposicao.com.br/Project/View/3).'); ?>
-                                <?php echo $this->Form->input('Link', array('class' => 'form-control', 'required')); ?>
+                                <?php echo $this->Form->input('Link', array('class' => 'form-control')); ?>
                             </div>
 
                         </div>

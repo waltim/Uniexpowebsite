@@ -1608,7 +1608,6 @@ textarea {
     float: right;
     height: 40px;
     width: 40px;
-    background: url('../../img/cart.png') no-repeat left center;
     position: relative;
 }
 
@@ -2939,7 +2938,7 @@ html[xmlns] .slides {
     border-radius: 9999px;
     background-clip: padding-box;
     -webkit-background-clip: border-box;
-    -moz-background-clip: border-box;
+
     background-clip: border-box;
 }
 
@@ -4791,7 +4790,7 @@ html[xmlns] .slides {
 
 .servicos a {
     text-decoration: none;
-    background: #bdbdbd;
+    background: #0159A2;
     color: #fff;
     padding: 10px 10px 10px 10px;
     float: right;

@@ -68,8 +68,8 @@
                     </div>
                     <div class="span6 ">
                         <div class="logar pull-right">
-                            <a href="" title="">
-                                Painel do Aluno/Registre-se
+                            <a href="<?=$admLocal?>" title="Acesse o painel">
+                                Área do Aluno
                             </a>
                         </div>
                     </div>

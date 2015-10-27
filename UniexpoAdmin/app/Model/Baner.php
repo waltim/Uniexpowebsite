@@ -12,15 +12,5 @@ class Baner extends AppModel{
         'MeioUpload' => array('filename')
     );
 
-    public $validate = array(
-        'Link' => array(
-            'required' => array(
-                'rule' => array('notEmpty'),
-                'message' => 'Este campo é obrigatorio.'
-            )
-        )
-    );
-
-
 
 } 

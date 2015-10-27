@@ -51,7 +51,7 @@ class SkillUsersController extends AppController
             $data['SkillUser']['user_id'] = $this->Auth->user('id');
             $data['SkillUser']['skill_id'] = $idSkill;
                 if ($this->SkillUser->save($data)) {
-                    $this->Session->setFlash(__('A habilidade registrada na sua lista de competências!'), 'flash/success');
+                    $this->Session->setFlash(__('A habilidade foi registrada na sua lista de competências!'), 'flash/success');
                     $this->redirect(array('controller' => 'Users', 'action' => 'perfil'));
                     $this->data = array();
                 }
@@ -70,7 +70,7 @@ class SkillUsersController extends AppController
             $this->redirect(array('controller'=> 'Users' , 'action' => 'perfil'));
         }
         if ($this->SkillUser->delete()) {
-            $this->Session->setFlash(__('Habilidade retirado da sua lista de competências.'), 'flash/success');
+            $this->Session->setFlash(__('A habilidade foi retirada da sua lista de competências.'), 'flash/success');
             $this->redirect(array('controller'=> 'Users' , 'action' => 'perfil'));
         }
         $this->Session->setFlash(__('Skill não pode ser retirada, tente novamente.'), 'flash/error');
