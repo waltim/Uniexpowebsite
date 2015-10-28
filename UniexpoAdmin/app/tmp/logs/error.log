@@ -1070,3 +1070,57 @@ Stack Trace:
 #3 D:\xampp\htdocs\UniexpoAdmin\lib\Cake\Core\App.php(902): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2015-10-28 19:50:45 Error: [MissingControllerException] Controller class Ï¿½Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Ï¿½Controller',
+  'plugin' => NULL,
+)
+Request URL: /Uniexpo/UniexpoAdmin/%EF%BF%BD/%EF%BF%BD
+Stack Trace:
+#0 D:\xampp\htdocs\Uniexpo\UniexpoAdmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-28 19:50:46 Error: [MissingControllerException] Controller class Ï¿½Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Ï¿½Controller',
+  'plugin' => NULL,
+)
+Request URL: /Uniexpo/UniexpoAdmin/%EF%BF%BD/%EF%BF%BD
+Stack Trace:
+#0 D:\xampp\htdocs\Uniexpo\UniexpoAdmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-28 19:53:52 Error: [MissingControllerException] Controller class Ï¿½Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Ï¿½Controller',
+  'plugin' => NULL,
+)
+Request URL: /Uniexpo/UniexpoAdmin/%EF%BF%BD/%EF%BF%BD
+Stack Trace:
+#0 D:\xampp\htdocs\Uniexpo\UniexpoAdmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-28 19:53:52 Error: [MissingControllerException] Controller class Ï¿½Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Ï¿½Controller',
+  'plugin' => NULL,
+)
+Request URL: /Uniexpo/UniexpoAdmin/%EF%BF%BD/%EF%BF%BD
+Stack Trace:
+#0 D:\xampp\htdocs\Uniexpo\UniexpoAdmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-28 20:12:55 Error: [MissingControllerException] Controller class Ï¿½Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Ï¿½Controller',
+  'plugin' => NULL,
+)
+Request URL: /Uniexpo/UniexpoAdmin/%EF%BF%BD/%EF%BF%BD
+Stack Trace:
+#0 D:\xampp\htdocs\Uniexpo\UniexpoAdmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-28 20:12:55 Error: [MissingControllerException] Controller class Ï¿½Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Ï¿½Controller',
+  'plugin' => NULL,
+)
+Request URL: /Uniexpo/UniexpoAdmin/%EF%BF%BD/%EF%BF%BD
+Stack Trace:
+#0 D:\xampp\htdocs\Uniexpo\UniexpoAdmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

@@ -15,7 +15,7 @@ class HomeController extends AppController
         $eventos = $this->Project->find('all', array(
             'conditions' => array(
                 'Project.Aceito' => 'S',
-                'Project.created >=' => date('Y'),
+                'Project.created >' => date('Y-m', strtotime("-1 years"))
             ),
             'order' => array('Project.Votos' => 'desc'),
             'limit' => 5

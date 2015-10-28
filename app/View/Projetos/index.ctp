@@ -1,81 +1,57 @@
+<script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+<script src="<?= $admSite ?>js/jquery.isotope.js" type="text/javascript"></script>
 <section class="main">
     <section class="category">
         <div class="container">
             <div class="row">
                 <div class="span3">
-                    <!-- Categories widget -->
                     <div class="widget Categories">
-                        <h3 class="widget-title widget-title ">Ranking - 5 mais votados!</h3>
+                        <h3 class="widget-title widget-title ">Cursos</h3>
                         <ul>
-                            <li>
-                                <a class="title">1 - projeto exemplo (263 votos)</a>
-                            </li>
+                            <div class="portfolioFilter">
+                                <a href="#" class="title" data-filter="*" class="current">Todos os cursos</a>
+                                <?php
+                                foreach ($tipos as $t): ?>
+                                    <li><a href="#" class="title"
+                                           data-filter=".<?php echo $t['Course']['id'];?>"><?php echo $t['Course']['Nome']; ?></a>
+                                    </li>
+                                <?php endforeach; ?>
+                            </div>
                         </ul>
                     </div>
                 </div>
                 <div class="span9">
                     <div class="servicos">
                         <ul>
-                            <li>
-                                <h2>Titulo</h2>
-                                <img src="<?=$admSite?>img/depo/img1.png" width="150px">
+                            <div class="portfolioContainer">
 
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum
-                                    molestie lacus. Aeonummy hendrerit mauris. Phasellus porta. Fusce suscipit
-                                    varius mi.</p>
-                                <a href="<?=$admSite?>Projetos/view">Veja Mais</a>
-                                <hr>
-                            </li>
-                            <li>
-                                <h2>Titulo</h2>
-                                <img src="<?=$admSite?>img/depo/img1.png" width="150px">
+                                    <?php
+                                    foreach ($novidades as $novidade): ?>
+                                <div class="<?php echo $novidade['Project']['course_id'];?>">
+                                        <li>
+                                            <h2><?php echo $novidade['Project']['Titulo'] . " " . $novidade['Project']['created'] ?></h2>
+                                            <?php if (!empty($novidade['ProjectImage'])): ?>
+                                                <?php
+                                                $novidade['ProjectImage'][0]['dir'] = explode('\\', $novidade['ProjectImage'][0]['dir']);
+                                                $novidade['ProjectImage'][0]['dir'] = implode('/', $novidade['ProjectImage'][0]['dir']);
+                                                $img = $admLocal . $novidade['ProjectImage'][0]['dir'] . "/" . $novidade['ProjectImage'][0]['filename'];
+                                                ?>
+                                                <img src="<?= $img ?>" width="150px">
+                                            <?php endif; ?>
+                                            <?php if (empty($novidade['ProjectImage'])): ?>
+                                                <img src="<?= $admSite . "img/artigo.jpg" ?>" width="150px">
+                                            <?php endif; ?>
+                                            <p><span>Tema - </span><?php echo $novidade['Theme']['Descricao']; ?></p>
 
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum
-                                    molestie lacus. Aeonummy hendrerit mauris. Phasellus porta. Fusce suscipit
-                                    varius mi.</p>
-                                <a href="<?=$admSite?>Projetos/view">Veja Mais</a>
-                                <hr>
-                            </li>
-                            <li>
-                                <h2>Titulo</h2>
-                                <img src="<?=$admSite?>img/depo/img1.png" width="150px">
+                                            <p><?php echo $novidade['Project']['Descricao']; ?></p>
+                                            <a href="<?= $admSite ?>Projetos/view/<?= $novidade['Project']['id'] ?>">Veja
+                                                Mais</a>
+                                            <hr>
+                                        </li>
+                                </div>
+                                    <?php endforeach; ?>
 
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum
-                                    molestie lacus. Aeonummy hendrerit mauris. Phasellus porta. Fusce suscipit
-                                    varius mi.</p>
-                                <a href="<?=$admSite?>Projetos/view">Veja Mais</a>
-                                <hr>
-                            </li>
-                            <li>
-                                <h2>Titulo</h2>
-                                <img src="<?=$admSite?>img/depo/img1.png" width="150px">
-
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum
-                                    molestie lacus. Aeonummy hendrerit mauris. Phasellus porta. Fusce suscipit
-                                    varius mi.</p>
-                                <a href="<?=$admSite?>Projetos/view">Veja Mais</a>
-                                <hr>
-                            </li>
-                            <li>
-                                <h2>Titulo</h2>
-                                <img src="<?=$admSite?>img/depo/img1.png" width="150px">
-
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum
-                                    molestie lacus. Aeonummy hendrerit mauris. Phasellus porta. Fusce suscipit
-                                    varius mi.</p>
-                                <a href="<?=$admSite?>Projetos/view">Veja Mais</a>
-                                <hr>
-                            </li>
-                            <li>
-                                <h2>Titulo</h2>
-                                <img src="<?=$admSite?>img/depo/img1.png" width="150px">
-
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum
-                                    molestie lacus. Aeonummy hendrerit mauris. Phasellus porta. Fusce suscipit
-                                    varius mi.</p>
-                                <a href="<?=$admSite?>Projetos/view">Veja Mais</a>
-                                <hr>
-                            </li>
+                            </div>
                         </ul>
                     </div>
                 </div>
@@ -86,3 +62,35 @@
     </section>
 
 </section>
+
+<script type="text/javascript">
+
+    $(window).load(function () {
+        var $container = $('.portfolioContainer');
+        $container.isotope({
+            filter: '*',
+            animationOptions: {
+                duration: 750,
+                easing: 'linear',
+                queue: false
+            }
+        });
+
+        $('.portfolioFilter a').click(function () {
+            $('.portfolioFilter .current').removeClass('current');
+            $(this).addClass('current');
+
+            var selector = $(this).attr('data-filter');
+            $container.isotope({
+                filter: selector,
+                animationOptions: {
+                    duration: 750,
+                    easing: 'linear',
+                    queue: false
+                }
+            });
+            return false;
+        });
+    });
+
+</script>

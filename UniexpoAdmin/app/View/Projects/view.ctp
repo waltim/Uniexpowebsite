@@ -98,9 +98,9 @@
                         <thead>
                         <tr>
                             <th><?php echo __('Pre Visualização'); ?></th>
-                            <?php if ($novidade['Project']['user_id'] == $this->Session->read('Auth.User.id') || $this->Session->read('Auth.User.user_type_id') == 1) : ?>
+                            <?php if ($novidade['Project']['user_id'] == $this->Session->read('Auth.User.id') || $this->Session->read('Auth.User.user_type_id') == 1 || $this->Session->read('Auth.User.user_type_id') == 3) : ?>
                                 <th>Status</th>
-                                <?php if ($novidade['Project']['user_id'] == $this->Session->read('Auth.User.id') || $this->Session->read('Auth.User.user_type_id') == 1 && $this->Session->read('Auth.User.course_id') == $novidade['Project']['course_id']) : ?>
+                                <?php if ($novidade['Project']['user_id'] == $this->Session->read('Auth.User.id') || $this->Session->read('Auth.User.user_type_id') == 1 && $this->Session->read('Auth.User.course_id') == $novidade['Project']['course_id'] || $this->Session->read('Auth.User.user_type_id') == 3) : ?>
                                     <th class="actions"><?php echo __('Ações'); ?></th>
                                 <?php endif; ?>
                             <?php endif; ?>
@@ -119,7 +119,7 @@
                                     ?>
                                     <img src="<?= $img ?>" style="width: 200px;" \>
                                 </td>
-                                <?php if ($novidade['Project']['user_id'] == $this->Session->read('Auth.User.id') || $this->Session->read('Auth.User.user_type_id') == 1) : ?>
+                                <?php if ($novidade['Project']['user_id'] == $this->Session->read('Auth.User.id') || $this->Session->read('Auth.User.user_type_id') == 1 || $this->Session->read('Auth.User.user_type_id') == 3) : ?>
                                     <td>
                                         <?php if ($novidadeImage['Aceito'] == 'S') : ?>
                                             <img src="<?= $admLocal ?>img/aprovado.png" style="width: 30px">
@@ -128,9 +128,9 @@
                                             <img src="<?= $admLocal ?>img/reprovado.png" style="width: 30px">
                                         <?php endif; ?>
                                     </td>
-                                    <?php if ($novidade['Project']['user_id'] == $this->Session->read('Auth.User.id') || $this->Session->read('Auth.User.user_type_id') == 1 && $this->Session->read('Auth.User.course_id') == $novidade['Project']['course_id']) : ?>
+                                    <?php if ($novidade['Project']['user_id'] == $this->Session->read('Auth.User.id') || $this->Session->read('Auth.User.user_type_id') == 1 && $this->Session->read('Auth.User.course_id') == $novidade['Project']['course_id'] || $this->Session->read('Auth.User.user_type_id') == 3) : ?>
                                         <td class="actions">
-                                            <?php if ($this->Session->read('Auth.User.user_type_id') == 1 || $this->Session->read('Auth.User.user_type_id') == 3 && $this->Session->read('Auth.User.course_id') == $novidade['Project']['course_id']) : ?>
+                                            <?php if ($this->Session->read('Auth.User.user_type_id') == 1 && $this->Session->read('Auth.User.course_id') == $novidade['Project']['course_id'] || $this->Session->read('Auth.User.user_type_id') == 3) : ?>
                                                 <?php
                                                 if ($novidadeImage['Aceito'] == 'N'):
                                                     echo $this->Html->link(__('Aprovar imagem'), array('controller' => 'ProjectImages', 'action' => 'aprovar', $novidadeImage['id'], $idProjeto, $idUsuario = $novidade['Project']['user_id']), array('class' => 'btn btn-default btn-xs'));
@@ -174,7 +174,7 @@
                             <th><?php echo __('Pre Visualização'); ?></th>
                             <?php if ($novidade['Project']['user_id'] == $this->Session->read('Auth.User.id') || $this->Session->read('Auth.User.user_type_id') == 1 || $this->Session->read('Auth.User.user_type_id') == 3) : ?>
                                 <th class="actions">Status</th>
-                                <?php if ($novidade['Project']['user_id'] == $this->Session->read('Auth.User.id') || $this->Session->read('Auth.User.user_type_id') == 1 && $this->Session->read('Auth.User.course_id') == $novidade['Project']['course_id']) : ?>
+                                <?php if ($novidade['Project']['user_id'] == $this->Session->read('Auth.User.id') || $this->Session->read('Auth.User.user_type_id') == 1 && $this->Session->read('Auth.User.course_id') == $novidade['Project']['course_id'] || $this->Session->read('Auth.User.user_type_id') == 3) : ?>
                                     <th class="actions"><?php echo __('Ações'); ?></th>
                                 <?php endif; ?>
                             <?php endif; ?>
@@ -200,7 +200,7 @@
                                     </iframe>
 
                                 </td>
-                                <?php if ($novidade['Project']['user_id'] == $this->Session->read('Auth.User.id') || $this->Session->read('Auth.User.user_type_id') == 1) : ?>
+                                <?php if ($novidade['Project']['user_id'] == $this->Session->read('Auth.User.id') || $this->Session->read('Auth.User.user_type_id') == 1 || $this->Session->read('Auth.User.user_type_id') == 3) : ?>
                                     <td>
                                         <?php if ($videos['Aceito'] == 'S') : ?>
                                             <img src="<?= $admLocal ?>img/aprovado.png" style="width: 30px">
@@ -209,9 +209,9 @@
                                             <img src="<?= $admLocal ?>img/reprovado.png" style="width: 30px">
                                         <?php endif; ?>
                                     </td>
-                                    <?php if ($novidade['Project']['user_id'] == $this->Session->read('Auth.User.id') || $this->Session->read('Auth.User.user_type_id') == 1 && $this->Session->read('Auth.User.course_id') == $novidade['Project']['course_id']) : ?>
+                                    <?php if ($novidade['Project']['user_id'] == $this->Session->read('Auth.User.id') || $this->Session->read('Auth.User.user_type_id') == 1 && $this->Session->read('Auth.User.course_id') == $novidade['Project']['course_id'] || $this->Session->read('Auth.User.user_type_id') == 3) : ?>
                                         <td class="actions">
-                                            <?php if ($this->Session->read('Auth.User.user_type_id') == 1 || $this->Session->read('Auth.User.user_type_id') == 3 && $this->Session->read('Auth.User.course_id') == $novidade['Project']['course_id']) : ?>
+                                            <?php if ($this->Session->read('Auth.User.user_type_id') == 1 && $this->Session->read('Auth.User.course_id') == $novidade['Project']['course_id'] || $this->Session->read('Auth.User.user_type_id') == 3) : ?>
                                                 <?php
                                                 if ($videos['Aceito'] == 'N'):
                                                     echo $this->Html->link(__('Aprovar vídeo'), array('controller' => 'Movies', 'action' => 'aprovar', $videos['id'], $idProjeto, $idUsuario = $novidade['Project']['user_id']), array('class' => 'btn btn-default btn-xs'));
@@ -255,9 +255,9 @@
                             <thead>
                             <tr>
                                 <th><?php echo __('Arquivo'); ?></th>
-                                <?php if ($novidade['Project']['user_id'] == $this->Session->read('Auth.User.id') || $this->Session->read('Auth.User.user_type_id') == 1) : ?>
+                                <?php if ($novidade['Project']['user_id'] == $this->Session->read('Auth.User.id') || $this->Session->read('Auth.User.user_type_id') == 1 || $this->Session->read('Auth.User.user_type_id') == 3) : ?>
                                     <th>Status</th>
-                                    <?php if ($novidade['Project']['user_id'] == $this->Session->read('Auth.User.id') || $this->Session->read('Auth.User.user_type_id') == 1 && $this->Session->read('Auth.User.course_id') == $novidade['Project']['course_id']) : ?>
+                                    <?php if ($novidade['Project']['user_id'] == $this->Session->read('Auth.User.id') || $this->Session->read('Auth.User.user_type_id') == 1 && $this->Session->read('Auth.User.course_id') == $novidade['Project']['course_id'] || $this->Session->read('Auth.User.user_type_id') == 3) : ?>
                                         <th class="actions"><?php echo __('Ações'); ?></th>
                                     <?php endif; ?>
                                 <?php endif; ?>
@@ -275,7 +275,7 @@
                                     <a href="<?= $arq ?>"
                                        target="_blank"><?php echo $arquivo['filename']; ?>&nbsp;</a>
                                 </td>
-                                <?php if ($novidade['Project']['user_id'] == $this->Session->read('Auth.User.id') || $this->Session->read('Auth.User.user_type_id') == 1) : ?>
+                                <?php if ($novidade['Project']['user_id'] == $this->Session->read('Auth.User.id') || $this->Session->read('Auth.User.user_type_id') == 1 || $this->Session->read('Auth.User.user_type_id') == 3) : ?>
                                     <td>
                                         <?php if ($arquivo['Aceito'] == 'S') : ?>
                                             <img src="<?= $admLocal ?>img/aprovado.png" style="width: 30px">
@@ -284,9 +284,9 @@
                                             <img src="<?= $admLocal ?>img/reprovado.png" style="width: 30px">
                                         <?php endif; ?>
                                     </td>
-                                    <?php if ($novidade['Project']['user_id'] == $this->Session->read('Auth.User.id') || $this->Session->read('Auth.User.user_type_id') == 1 && $this->Session->read('Auth.User.course_id') == $novidade['Project']['course_id']) : ?>
+                                    <?php if ($novidade['Project']['user_id'] == $this->Session->read('Auth.User.id') || $this->Session->read('Auth.User.user_type_id') == 1 && $this->Session->read('Auth.User.course_id') == $novidade['Project']['course_id'] || $this->Session->read('Auth.User.user_type_id') == 3) : ?>
                                         <td class="actions">
-                                            <?php if ($this->Session->read('Auth.User.user_type_id') == 1 || $this->Session->read('Auth.User.user_type_id') == 3 && $this->Session->read('Auth.User.course_id') == $novidade['Project']['course_id']) : ?>
+                                            <?php if ($this->Session->read('Auth.User.user_type_id') == 1 && $this->Session->read('Auth.User.course_id') == $novidade['Project']['course_id'] || $this->Session->read('Auth.User.user_type_id') == 3) : ?>
                                                 <?php
                                                 if ($arquivo['Aceito'] == 'N'):
                                                     echo $this->Html->link(__('Aprovar Arquivo'), array('controller' => 'Archives', 'action' => 'aprovar', $arquivo['id'], $idProjeto, $idUsuario = $novidade['Project']['user_id']), array('class' => 'btn btn-default btn-xs'));

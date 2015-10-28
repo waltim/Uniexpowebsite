@@ -125,7 +125,7 @@
             <div class="navbar-custom-menu">
                 <ul class="nav navbar-nav">
                     <li class="dropdown user user-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <a href="<?=$admSite?>" target="_blank" class="dropdown-toggle">
                             <span class="hidden-xs">Ir para o site</span>
                         </a>
                     </li>

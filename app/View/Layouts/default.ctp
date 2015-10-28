@@ -54,7 +54,6 @@
 
 <div class="wrapper">
 
-    <!-- Header -->
     <div class="header">
         <div class="bottom">
             <div class="container">
@@ -68,7 +67,7 @@
                     </div>
                     <div class="span6 ">
                         <div class="logar pull-right">
-                            <a href="<?=$admLocal?>" title="Acesse o painel">
+                            <a href="<?=$admLocal?>Users/perfil" target="_blank" title="Acesse o painel">
                                 Área do Aluno
                             </a>
                         </div>

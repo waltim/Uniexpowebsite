@@ -34,6 +34,7 @@ class AppController extends Controller {
 
     public $admLocal = "/Uniexpo/UniexpoAdmin/";
     public $urlSite = "localhost";
+    public $admSite = "/Uniexpo/";
 
     public $components = array(
         'Email'=>array(),
@@ -85,6 +86,7 @@ class AppController extends Controller {
 
         $this->set("admLocal",$this->admLocal);
         $this->set("urlSite",$this->urlSite);
+        $this->set('admSite',$this->admSite);
         $this->set('logado',$this->Auth->loggedIn());
     }
 
