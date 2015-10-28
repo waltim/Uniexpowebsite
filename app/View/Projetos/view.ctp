@@ -107,7 +107,9 @@
                                         $i = 0;
                                         foreach ($foto as $fotos): ?>
                                             <?php $imagem = $fotos['User']; ?>
+
                                             <?php if (!empty($imagem['UserImage'])): ?>
+                                                <?php if ($imagem['UserImage']['Aceito'] == 'S'): ?>
                                                 <?php
                                                 $imagem['UserImage']['dir'] = explode('\\', $imagem['UserImage']['dir']);
                                                 $imagem['UserImage']['dir'] = implode('/', $imagem['UserImage']['dir']);
@@ -116,6 +118,7 @@
                                                 <a href="#<?php echo $fotos['User']['id']; ?>" role="button" data-toggle="modal">
                                                     <img src="<?= $img ?>" style="width: 89px; height: 89px" \>
                                                 </a>
+                                            <?php endif; ?>
                                             <?php endif; ?>
                                             <?php if (empty($imagem['UserImage'])): ?>
                                                 <?php if ($imagem['Sexo'] == 'Masculino') : ?>
@@ -143,6 +146,7 @@
                                                     <div class="header-modal">
                                                         <div class="span2">
                                                             <?php if (!empty($imagem['UserImage'])): ?>
+
                                                                 <?php
                                                                 $imagem['UserImage']['dir'] = explode('\\', $imagem['UserImage']['dir']);
                                                                 $imagem['UserImage']['dir'] = implode('/', $imagem['UserImage']['dir']);
@@ -151,6 +155,7 @@
                                                                 <a href="#myModal" role="button" data-toggle="modal">
                                                                     <img src="<?= $img ?>" style="width: 120px;" \>
                                                                 </a>
+
                                                             <?php endif; ?>
                                                             <?php if (empty($imagem['UserImage'])): ?>
                                                                 <?php if ($imagem['Sexo'] == 'Masculino') : ?>

@@ -23,7 +23,9 @@ class ProjetosController extends AppController
         ));
 
         $this->Course->recursive = 0;
-        $Semestres = $this->Course->find('all');
+        $Semestres = $this->Course->find('all',array(
+            'order' => array('Course.Nome' =>'asc'),
+        ));
 
         $this->set('tipos',$Semestres, $this->paginate());
         $this->set('novidades', $eventos, $this->paginate());

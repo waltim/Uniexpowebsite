@@ -12,7 +12,7 @@ class UserImagesController extends AppController
 
     public function aprovar($id = null){
         $this->UserImage->id = $id;
-        if ($this->Session->read('Auth.User.user_type_id') == 1) {
+        if ($this->Session->read('Auth.User.user_type_id') == 1 || $this->Session->read('Auth.User.user_type_id') == 3) {
             $usuario = $this->UserImage->find('first',array('conditions'=>array('UserImage.id'=>$id)));
             if($this->UserImage->saveField("Aceito","S")){
                 $this->Session->setFlash(__('A foto do usuário foi aprovada!'), 'flash/success');
@@ -27,7 +27,7 @@ class UserImagesController extends AppController
 
     public function desaprovar($id = null){
         $this->UserImage->id = $id;
-        if ($this->Session->read('Auth.User.user_type_id') == 1) {
+        if ($this->Session->read('Auth.User.user_type_id') == 1 || $this->Session->read('Auth.User.user_type_id') == 3) {
             $usuario = $this->UserImage->find('first',array('conditions'=>array('UserImage.id'=>$id)));
             if($this->UserImage->saveField("Aceito","N")){
                 $this->Session->setFlash(__('A foto do usuário foi reprovada!'), 'flash/info');

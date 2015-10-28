@@ -50,7 +50,7 @@
                                 <?php
                                 foreach ($novidades as $novidade): ?>
                                     <li>
-                                        <h2><?php echo $novidade['Project']['Titulo'] . " " . $novidade['Project']['created'] ?></h2>
+                                        <h2><?php echo $novidade['Project']['Titulo']; ?></h2>
                                         <?php if (!empty($novidade['ProjectImage'])): ?>
                                             <?php
                                             $novidade['ProjectImage'][0]['dir'] = explode('\\', $novidade['ProjectImage'][0]['dir']);
