@@ -19,6 +19,7 @@ class ProjectsController extends AppController
         $this->loadModel('Movie');
         $this->loadModel('ProjectImage');
         $this->loadModel('ProjectUser');
+        $this->loadModel('Project');
     }
 
 
@@ -28,7 +29,7 @@ class ProjectsController extends AppController
         if ($this->Session->read('Auth.User.user_type_id') == 1 || $this->Session->read('Auth.User.user_type_id') == 3) {
             $usuario = $this->Project->find('first', array('conditions' => array('Project.id' => $id)));
             if ($this->Project->saveField("Aceito", "S")) {
-                $this->Session->setFlash(__('O projeto "' . $usuario['Project']['Titulo'] . '"foi aprovado!'), 'flash/success');
+                $this->Session->setFlash(__('O projeto foi aprovado!'), 'flash/success');
                 $this->redirect(array('action' => 'index'));
             }
         } else {
@@ -43,7 +44,7 @@ class ProjectsController extends AppController
         if ($this->Session->read('Auth.User.user_type_id') == 1 || $this->Session->read('Auth.User.user_type_id') == 3) {
             $usuario = $this->Project->find('first', array('conditions' => array('Project.id' => $id)));
             if ($this->Project->saveField("Aceito", "N")) {
-                $this->Session->setFlash(__('O projeto "' . $usuario['Project']['Titulo'] . '" foi reprovado!'), 'flash/success');
+                $this->Session->setFlash(__('O projeto foi reprovado!'), 'flash/success');
                 $this->redirect(array('action' => 'index'));
             }
         } else {

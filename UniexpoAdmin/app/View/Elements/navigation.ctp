@@ -17,6 +17,8 @@
          folder instead of downloading all of them to reduce the load. -->
     <link href="<?= $admLocal ?>dist/css/skins/_all-skins.min.css" rel="stylesheet" type="text/css"/>
 
+    <link rel="icon" type="image/png" href="<?= $admLocal?>img/favicon.png"/>
+
     <link href="<?=$admLocal?>plugins/iCheck/square/blue.css" rel="stylesheet" type="text/css" />
 
     <?php if ($this->params['controller'] === 'Users' && $this->params['action'] === 'index'): ?>

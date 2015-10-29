@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <title>UNIEXPO | Plataforma para Divulgação</title>
-
+    <link rel="icon" type="image/png" href="<?= $admSite ?>img/favicon.png"/>
 
     <link rel="stylesheet" type="text/css" href="<?= $admSite ?>css/bootstrap.css"/>
     <link rel="stylesheet" type="text/css" href="<?= $admSite ?>css/bootstrap-responsive.css"/>
@@ -67,7 +67,7 @@
                     </div>
                     <div class="span6 ">
                         <div class="logar pull-right">
-                            <a href="<?=$admLocal?>Users/perfil" target="_blank" title="Acesse o painel">
+                            <a href="<?= $admLocal ?>Users/perfil" target="_blank" title="Acesse o painel">
                                 Área do Aluno
                             </a>
                         </div>
@@ -152,8 +152,10 @@
         <div class="container">
             <div class="row">
                 <div class="span8">
-                    <p>&copy; 2015 | criado por: <a href="https://br.linkedin.com/pub/walter-lucas/b9/635/688" target="_blank"
-                                      title="Design by: Walter Lucas">Walter Lucas</a>&middot; Todos os direitos reservados.
+                    <p>&copy; 2015 | criado por: <a href="https://br.linkedin.com/pub/walter-lucas/b9/635/688"
+                                                    target="_blank"
+                                                    title="Design by: Walter Lucas">Walter Lucas</a>&middot; Todos os
+                        direitos reservados.
                     </p>
                 </div>
             </div>
