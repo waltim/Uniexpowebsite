@@ -1,4 +1,4 @@
-<?//=pr($novidade);exit();?>
+<? //=pr($novidade);exit();?>
 <section class="main">
     <section class="product">
         <section class="product-info">
@@ -85,19 +85,20 @@
                                                 <?php echo $novidade['Project']['Descricao']; ?>
                                             </p>
                                         </div>
-                                        <?php if (!empty( $arquivo[0]['Archive'])): ?>
+                                        <?php if (!empty($arquivo[0]['Archive'])): ?>
                                             <?php
 
-                                            $arq = explode("\\",  $arquivo[0]['Archive']['dir']);
+                                            $arq = explode("\\", $arquivo[0]['Archive']['dir']);
                                             $arq = implode('/', $arq);
-                                            $arq = $admLocal . $arq . '/' .  $arquivo[0]['Archive']['filename'];
+                                            $arq = $admLocal . $arq . '/' . $arquivo[0]['Archive']['filename'];
                                             ?>
                                             <p style="margin-left: 510px">Vizualizar artigo do projeto</p>
-                                            <a href="<?= $arq ?>" target="_blank"><img src="<?=$admSite?>img/arquivo.png" style=" width: 86px; margin-left: 600px"></a>
+                                            <a href="<?= $arq ?>" target="_blank"><img
+                                                    src="<?= $admSite ?>img/arquivo.png"
+                                                    style=" width: 86px; margin-left: 600px"></a>
                                         <?php endif; ?>
                                     </div>
                                     <!-- End id="product" -->
-
                                     <!-- Description tab -->
                                     <div class="tab-pane" id="description">
                                         <div class="details">
@@ -110,31 +111,36 @@
 
                                             <?php if (!empty($imagem['UserImage'])): ?>
                                                 <?php if ($imagem['UserImage']['Aceito'] == 'S'): ?>
-                                                <?php
-                                                $imagem['UserImage']['dir'] = explode('\\', $imagem['UserImage']['dir']);
-                                                $imagem['UserImage']['dir'] = implode('/', $imagem['UserImage']['dir']);
-                                                $img = $admLocal . $imagem['UserImage']['dir'] . "/" . $imagem['UserImage']['filename'];
-                                                ?>
-                                                <a href="#<?php echo $fotos['User']['id']; ?>" role="button" data-toggle="modal">
-                                                    <img src="<?= $img ?>" style="width: 89px; height: 89px" \>
-                                                </a>
-                                            <?php endif; ?>
+                                                    <?php
+                                                    $imagem['UserImage']['dir'] = explode('\\', $imagem['UserImage']['dir']);
+                                                    $imagem['UserImage']['dir'] = implode('/', $imagem['UserImage']['dir']);
+                                                    $img = $admLocal . $imagem['UserImage']['dir'] . "/" . $imagem['UserImage']['filename'];
+                                                    ?>
+                                                    <a href="#<?php echo $fotos['User']['id']; ?>" role="button"
+                                                       data-toggle="modal">
+                                                        <img src="<?= $img ?>" style="width: 89px; height: 89px" \>
+                                                    </a>
+                                                <?php endif; ?>
                                             <?php endif; ?>
                                             <?php if (empty($imagem['UserImage'])): ?>
                                                 <?php if ($imagem['Sexo'] == 'Masculino') : ?>
-                                                    <a href="#<?php echo $fotos['User']['id']; ?>" role="button" data-toggle="modal">
+                                                    <a href="#<?php echo $fotos['User']['id']; ?>" role="button"
+                                                       data-toggle="modal">
                                                         <img src="<?= $admLocal ?>img/masculino.jpg"
                                                              style="width: 89px">
                                                     </a>
                                                 <?php endif; ?>
                                                 <?php if ($imagem['Sexo'] == 'Feminino') : ?>
-                                                    <a href="#<?php echo $fotos['User']['id']; ?>" role="button" data-toggle="modal">
+                                                    <a href="#<?php echo $fotos['User']['id']; ?>" role="button"
+                                                       data-toggle="modal">
                                                         <img src="<?= $admLocal ?>img/feminino.jpg"
                                                              style="width: 89px">
                                                     </a>
                                                 <?php endif; ?>
                                             <?php endif; ?>
-                                            <div id="<?php echo $fotos['User']['id']; ?>" class="modal hide fade modal-wide" tabindex="-1"
+                                            <div id="<?php echo $fotos['User']['id']; ?>"
+                                                 class="modal hide fade modal-wide"
+                                                 tabindex="-1"
                                                  role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                                 <div class="modal-header">
                                                     <button type="button" class="close" data-dismiss="modal"
@@ -193,49 +199,90 @@
                                                                 </li>
                                                             </ul>
                                                         </div>
+                                                        <h4>Redes Sociais</h4>
+
+                                                        <div class="span4" style="float: right">
+                                                            <ul>
+                                                                <?php
+                                                                $i = 0;
+                                                                foreach ($imagem['Social'] as $novidadeImage): ?>
+                                                                    <?php if ($novidadeImage['social_types']['Descricao'] == 'Facebook') : ?>
+                                                                        <a href="<?php echo $novidadeImage['Link']; ?>"
+                                                                           target="_blank"> <img
+                                                                                src="<?= $admLocal ?>img/facebook-icon.png"
+                                                                                style="width: 56px"></a>
+                                                                    <?php endif; ?>
+                                                                    <?php if ($novidadeImage['social_types']['Descricao'] == 'Instagram') : ?>
+                                                                        <a href="<?php echo $novidadeImage['Link']; ?>"
+                                                                           target="_blank"> <img
+                                                                                src="<?= $admLocal ?>img/instagram.png"
+                                                                                style="width: 56px"></a>
+                                                                    <?php endif; ?>
+                                                                    <?php if ($novidadeImage['social_types']['Descricao'] == 'Twitter') : ?>
+                                                                        <a href="<?php echo $novidadeImage['Link']; ?>"
+                                                                           target="_blank"> <img
+                                                                                src="<?= $admLocal ?>img/twitter.png"
+                                                                                style="width: 56px"></a>
+                                                                    <?php endif; ?>
+                                                                    <?php if ($novidadeImage['social_types']['Descricao'] == 'Linkedin') : ?>
+                                                                        <a href="<?php echo $novidadeImage['Link']; ?>"
+                                                                           target="_blank"> <img
+                                                                                src="<?= $admLocal ?>img/linkedin.png"
+                                                                                style="width: 56px"></a>
+                                                                    <?php endif; ?>
+                                                                    <?php if ($novidadeImage['social_types']['Descricao'] == 'Youtube') : ?>
+                                                                        <a href="<?php echo $novidadeImage['Link']; ?>"
+                                                                           target="_blank"> <img
+                                                                                src="<?= $admLocal ?>img/Youtube.png"
+                                                                                style="width: 56px"></a>
+                                                                    <?php endif; ?>
+                                                                <?php endforeach; ?>
+                                                            </ul>
+                                                        </div>
                                                     </div>
                                                     <div class="clearfix"></div>
                                                     <h4>Habilidades</h4>
 
                                                     <div class="span5">
                                                         <ul>
-                                                            <li><p>Habilidades</p></li>
-                                                            <li><p>Habilidades</p></li>
-                                                            <li><p>Habilidades</p></li>
+                                                            <?php
+                                                            $i = 0;
+                                                            foreach ($imagem['SkillUser'] as $habilidades): ?>
+                                                                <?php $comp = $habilidades['Skill']; ?>
+                                                                <li> <?php echo $comp['Nome']; ?> </li>
+                                                            <?php endforeach; ?>
                                                         </ul>
                                                     </div>
 
-                                                    <div class="span5">
-                                                        <li><p>Habilidades</p></li>
-                                                        <li><p>Habilidades</p></li>
-                                                        <li><p>Habilidades</p></li>
-                                                    </div>
                                                     <div class="clearfix"></div>
                                                     <h4>Projetos</h4>
 
                                                     <div class="span5">
                                                         <ul>
-                                                            <li><p>Projetos</p></li>
-                                                            <li><p>Projetos</p></li>
-                                                            <li><p>Projetos</p></li>
-<!--                                                            --><?php
-//                                                            $i = 0;
-//                                                            foreach ($pj as $img): ?>
-<!--                                                                --><?php //$img = $pj['Project']; ?>
-<!--                                                            <li><p>--><?php //echo $img['Titulo']; ?><!--</p></li>-->
-<!--                                                            --><?php //endforeach; ?>
+                                                            <?php
+                                                            $i = 0;
+                                                            foreach ($imagem['ProjectUser'] as $proj): ?>
+                                                                <?php $pjc = $proj['Project']; ?>
+                                                                <li><a href="<?=$admSite?>Projetos/view/<?php echo $pjc['id']; ?>"> <?php echo $pjc['Titulo']; ?> </a></li>
+                                                            <?php endforeach; ?>
                                                         </ul>
                                                     </div>
 
                                                     <div class="span5">
                                                         <ul>
-                                                            <li><p>Projetos</p></li>
-                                                            <li><p>Projetos</p></li>
-                                                            <li><p>Projetos</p></li>
+                                                            <?php $curriculo = $imagem['Resume']; ?>
+                                                            <?php if (!empty($curriculo)): ?>
+                                                                <h4>Abrir currículo do aluno</h4>
+                                                                <?php $arq = explode("\\", $curriculo['dir']);
+                                                                $arq = implode('/', $arq);
+                                                                $arq = $admLocal . $arq . '/' . $curriculo['filename'];
+                                                                ?>
+                                                                <a href="<?= $arq ?>" target="_blank"><img
+                                                                        src="<?= $admSite ?>img/curriculo.png"
+                                                                        style=" width: 86px;"></a>
+                                                            <?php endif; ?>
                                                         </ul>
                                                     </div>
-
-
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button class="btn btn-primary" data-dismiss="modal"
@@ -245,6 +292,8 @@
                                                 </div>
                                             </div>
                                         <?php endforeach; ?>
+
+
                                         <br>
                                         <br>
 
@@ -280,7 +329,7 @@
                                         <?php
                                         $i = 0;
                                         foreach ($novidade['Movie'] as $videos): ?>
-                                            <?php if (!empty($videos['Aceito']=='S')): ?>
+                                            <?php if (!empty($videos['Aceito'] == 'S')): ?>
                                                 <?php
                                                 $linkVideo = explode("v=", $videos['Link']);
                                                 if (!is_array($linkVideo)) {
@@ -289,13 +338,14 @@
                                                 };
                                                 $linkVideo = array_pop($linkVideo);
                                                 ?>
-                                                <iframe width="300" height="200" src="//www.youtube.com/embed/<?= $linkVideo ?>"
+                                                <iframe width="300" height="200"
+                                                        src="//www.youtube.com/embed/<?= $linkVideo ?>"
                                                         frameborder="0" allowfullscreen>
 
                                                 </iframe>
                                             <?php endif; ?>
                                         <?php endforeach; ?>
-                                         </div>
+                                    </div>
 
                                     <div class="tab-pane" id="galeria">
                                         <p>Galeria de fotos do projeto</p>
@@ -303,15 +353,15 @@
                                             <?php
                                             $i = 0;
                                             foreach ($novidade['ProjectImage'] as $novaimg): ?>
-                                                <?php if (!empty($novaimg['Aceito']=='S')): ?>
-                                                <?php
-                                                $novaimg['dir'] = explode('\\', $novaimg['dir']);
-                                                $novaimg['dir'] = implode('/', $novaimg['dir']);
-                                                $img = $admLocal . $novaimg['dir'] . "/" . $novaimg['filename'];
-                                                ?>
-                                                <li style="list-style: none; padding-bottom: 5px">
-                                                    <img src="<?=$img?>" style="width: 200px;">
-                                                </li>
+                                                <?php if (!empty($novaimg['Aceito'] == 'S')): ?>
+                                                    <?php
+                                                    $novaimg['dir'] = explode('\\', $novaimg['dir']);
+                                                    $novaimg['dir'] = implode('/', $novaimg['dir']);
+                                                    $img = $admLocal . $novaimg['dir'] . "/" . $novaimg['filename'];
+                                                    ?>
+                                                    <li style="list-style: none; padding-bottom: 5px">
+                                                        <img src="<?= $img ?>" style="width: 200px;">
+                                                    </li>
                                                 <?php endif; ?>
                                             <?php endforeach; ?>
                                         </ul>
