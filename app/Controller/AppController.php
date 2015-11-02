@@ -32,7 +32,7 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 
-    public $components = array('Paginator');
+    public $components = array('Paginator','Session');
 
     public $admLocal = "/Uniexpo/UniexpoAdmin/";
     public $admSite = "/Uniexpo/";

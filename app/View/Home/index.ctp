@@ -97,3 +97,9 @@
         </section>
     </section>
 </section>
+<script type="text/javascript">
+    $('.bxslider').bxSlider({
+        pager: false,
+        controls: true,
+    });
+</script>

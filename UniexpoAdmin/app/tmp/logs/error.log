@@ -1124,3 +1124,66 @@ Request URL: /Uniexpo/UniexpoAdmin/%EF%BF%BD/%EF%BF%BD
 Stack Trace:
 #0 D:\xampp\htdocs\Uniexpo\UniexpoAdmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2015-11-02 21:26:35 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Uniexpo/UniexpoAdmin/js/lightbox-2.6.min.js
+Stack Trace:
+#0 D:\xampp\htdocs\Uniexpo\UniexpoAdmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-11-02 21:26:41 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Uniexpo/UniexpoAdmin/js/lightbox-2.6.min.js
+Stack Trace:
+#0 D:\xampp\htdocs\Uniexpo\UniexpoAdmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-11-02 21:50:04 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Uniexpo/UniexpoAdmin/js/lightbox-2.6.min.js
+Stack Trace:
+#0 D:\xampp\htdocs\Uniexpo\UniexpoAdmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-11-02 21:54:59 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Uniexpo/UniexpoAdmin/js/lightbox-2.6.min.js
+Stack Trace:
+#0 D:\xampp\htdocs\Uniexpo\UniexpoAdmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-11-02 21:55:47 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Uniexpo/UniexpoAdmin/js/lightbox-2.6.min.js
+Stack Trace:
+#0 D:\xampp\htdocs\Uniexpo\UniexpoAdmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-11-02 22:04:28 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Uniexpo/UniexpoAdmin/js/lightbox-2.6.min.js
+Stack Trace:
+#0 D:\xampp\htdocs\Uniexpo\UniexpoAdmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-11-02 22:04:35 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /Uniexpo/UniexpoAdmin/js/lightbox-2.6.min.js
+Stack Trace:
+#0 D:\xampp\htdocs\Uniexpo\UniexpoAdmin\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

@@ -12,27 +12,26 @@
 
                                     <div class="galeria-tutorial">
                                         <ul>
-                                            <li>
-                                                <iframe width="520" height="315"
-                                                        src="https://www.youtube.com/embed/Zm9ZvEKUBBo"
-                                                        frameborder="0" autoplay="0" allowfullscreen></iframe>
-                                            </li>
-                                            <li>
-                                                <iframe width="520" height="315"
-                                                        src="https://www.youtube.com/embed/Zm9ZvEKUBBo"
-                                                        frameborder="0" autoplay="0" allowfullscreen></iframe>
-                                            </li>
-                                            <li>
-                                                <iframe width="520" height="315"
-                                                        src="https://www.youtube.com/embed/Zm9ZvEKUBBo"
-                                                        frameborder="0" autoplay="0" allowfullscreen></iframe>
-                                            </li>
-                                            <li>
-                                                <iframe width="520" height="315"
-                                                        src="https://www.youtube.com/embed/Zm9ZvEKUBBo"
-                                                        frameborder="0" autoplay="0" allowfullscreen></iframe>
-                                            </li>
+                                            <?php
+                                            $i = 0;
+                                            foreach ($novidades as $videos): ?>
 
+                                                <?php
+                                                $linkVideo = explode("v=", $videos['Tutorial']['Link']);
+                                                if (!is_array($linkVideo)) {
+                                                    $linkVideo = explode("youtu.be/", $videos['Tutorial']['Link']);
+
+                                                };
+                                                $linkVideo = array_pop($linkVideo);
+                                                ?>
+                                                <li>
+                                                    <iframe width="520" height="315"
+                                                            src="//www.youtube.com/embed/<?= $linkVideo ?>"
+                                                            frameborder="0" allowfullscreen>
+
+                                                    </iframe>
+                                                </li>
+                                            <?php endforeach; ?>
                                         </ul>
                                     </div>
 

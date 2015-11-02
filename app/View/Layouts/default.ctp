@@ -28,11 +28,7 @@
     <link
         href="http://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Shadows+Into+Light"
         rel="stylesheet" type="text/css"/>
-
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script src="http://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>
-
-
     <script type="text/javascript" src="<?= $admSite ?>js/jquery-ui-1.10.2.custom.js"></script>
     <script type="text/javascript" src="<?= $admSite ?>js/jquery.easing-1.3.min.js"></script>
     <script type="text/javascript" src="<?= $admSite ?>js/bootstrap.js"></script>
@@ -40,10 +36,7 @@
     <script type="text/javascript" src="<?= $admSite ?>js/jquery.flexslider.js"></script>
     <script type="text/javascript" src="<?= $admSite ?>js/jquery.elevatezoom.js"></script>
     <script type="text/javascript" src="<?= $admSite ?>js/jquery.sharrre-1.3.4.js"></script>
-    <script type="text/javascript" src="<?= $admSite ?>js/jquery.gmap3.js"></script>
-    <script type="text/javascript" src="<?= $admSite ?>js/jquery.tweet.js"></script>
-    <script type="text/javascript" src="<?= $admSite ?>js/imagesloaded.js"></script>
-    <script type="text/javascript" src="<?= $admSite ?>js/la_boutique.js"></script>
+
     <script type="text/javascript" src="<?= $admSite ?>js/menu.js"></script>
     <script type="text/javascript" src="<?= $admSite ?>js/jquery.bxslider.min.js"></script>
     <!--preview only-->
@@ -162,27 +155,6 @@
         </div>
     </div>
 
-    <!-- End id="newsletter_subscribe" -->
 </div>
-<!-- I'm watching you -->
-<script type="text/javascript">
-    var sc_project = 9238432;
-    var sc_invisible = 1;
-    var sc_security = "e08559e3";
-    var sc_https = 1;
-    var sc_remove_link = 1;
-    var scJsHost = (("https:" == document.location.protocol) ?
-        "https://secure." : "http://www.");
-    document.write("<sc" + "ript type='text/javascript' src='" +
-        scJsHost +
-        "statcounter.com/counter/counter.js'></" + "script>");
-</script>
-<!-- Okay I'll stop watching you -->
-<script type="text/javascript">
-    $('.bxslider').bxSlider({
-        pager: false,
-        controls: true,
-    });
-</script>
 </body>
 </html>
