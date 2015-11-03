@@ -43,7 +43,7 @@
                                 <?php echo $this->Form->input('mimetype', array('class' => 'form-control', 'type' => 'hidden')); ?>
                             </div>
 
-                            <?php if ($this->Session->read('Auth.User.user_type_id') == 1) : ?>
+                            <?php if ($this->Session->read('Auth.User.user_type_id') == 1 || $this->Session->read('Auth.User.user_type_id') == 3) : ?>
 
                                 <div class="input text required">
                                     <input name="data[UserImage][Aceito]" type="hidden" id="UserImageAceito" value="S"/>

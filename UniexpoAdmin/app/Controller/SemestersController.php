@@ -26,6 +26,7 @@ class SemestersController extends AppController{
         $this->loadModel('Course');
         $idcurso = $this->request->data['User']['course_id'];
         $semestre = $this->Semester->find('list', array(
+            'order' => array('Semester.Descricao' => 'ASC'),
             'conditions' => array('Semester.course_id' => $idcurso),
             'recursive' => -1));
         $this->set('semestres', $semestre);

@@ -178,8 +178,10 @@ class UsersController extends AppController
                 $this->Session->setFlash(__('O usuário não foi salvo, tente novamente.'), 'flash/error');
             }
         }
-        $semestres = $this->User->Semester->find('list');
-        $cursos = $this->User->Semester->Course->find('list');
+        $semestres = $this->User->Semester->find('list',
+            array('order' => array('Semester.Descricao' => 'ASC')));
+        $cursos = $this->User->Semester->Course->find('list'
+            ,array('order' => array('Course.Nome' => 'ASC')));
         $this->set(compact('semestres', 'cursos'));
 
         $tipos = $this->User->user_types->find('list', array('fields' => array('id', 'Descricao')));
@@ -210,8 +212,10 @@ class UsersController extends AppController
             $this->Session->setFlash(__('Você não tem autorização.'), 'flash/error');
             $this->redirect(array('controller' => 'Users', 'action' => 'perfil'));
         }
-        $semestres = $this->User->Semester->find('list');
-        $cursos = $this->User->Semester->Course->find('list');
+        $semestres = $this->User->Semester->find('list',
+            array('order' => array('Semester.Descricao' => 'asc')));
+        $cursos = $this->User->Semester->Course->find('list'
+            ,array('order' => array('Course.Nome' => 'asc')));
         $this->set(compact('semestres', 'cursos'));
         $tipos = $this->User->user_types->find('list', array('fields' => array('id', 'Descricao')));
         $this->set('tipos', $tipos);

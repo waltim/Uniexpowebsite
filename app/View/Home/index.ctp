@@ -24,6 +24,7 @@
                     </ul>
                 </div>
                 <div class="span6">
+                    <?php if (isset($tutorials['Tutorial'])): ?>
                     <?php
                     $linkVideo = explode("v=", $tutorials['Tutorial']['Link']);
                     if (!is_array($linkVideo)) {
@@ -36,6 +37,7 @@
                             frameborder="0" allowfullscreen>
 
                     </iframe>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
